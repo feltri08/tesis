@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping()
 @CrossOrigin
 public class ProductController {
 
@@ -22,7 +22,7 @@ public class ProductController {
         this.productRepository = productRepository;
     }
 
-    @GetMapping("/products")
+    @GetMapping()
     public List<Product> getPatients(){
         return productRepository.findAll();
     }
