@@ -13,7 +13,7 @@ public class Product {
     private String description;
     private double price;
     @Lob
-    private Byte[] image;
+    private String image;
 
     private int storage;
 
@@ -49,11 +49,11 @@ public class Product {
         this.price = price;
     }
 
-    public Byte[] getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(Byte[] image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
@@ -65,15 +65,15 @@ public class Product {
         this.storage = storage;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Product{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", description='" + description + '\'' +
-//                ", price=" + price +
-//                ", image=" + Arrays.toString(image) +
-//                ", storage=" + storage +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", image=" + image +
+                ", storage=" + storage +
+                '}';
+    }
 }
